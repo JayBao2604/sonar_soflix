@@ -42,7 +42,7 @@ export default async function KPop() {
   const data = await getData(session?.user?.email as string);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-12 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-12 gap-6 lg:gap-8">
       {data.map((song) => (
         <div key={song.id} className="relative h-48">
           <Image

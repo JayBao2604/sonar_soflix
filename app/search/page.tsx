@@ -5,6 +5,7 @@ import Image from "next/image";
 import Logo from "../../public/sonar.png";
 import Link from "next/link";
 import { getData } from "../lib/action";
+import { Home } from "lucide-react";
 
 const SearchPage = async ({
     searchParams,
@@ -20,6 +21,11 @@ const SearchPage = async ({
             <div className="mb-10">
                 <Link href="/home" className="w-32">
                     <Image className="w-[640px]" src={Logo} alt="Sonar logo" priority />
+                </Link>
+            </div>
+            <div className="flex top-0 right-0 mb-8">
+                <Link href="/home" className="w-32">
+                    <Home className="w-8 h-8 text-sky-700 hover:text-white" />
                 </Link>
             </div>
             <div className="mt-auto max-w-[400px] mb-4 flex h-full w-full">

@@ -4,7 +4,7 @@ import { FormEvent } from "react";
 import { useChat } from "ai/react";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
-import { SendHorizonalIcon } from "lucide-react";
+import { SendHorizonalIcon, Home } from "lucide-react";
 import { ScrollArea } from "../components/ui/scroll-area";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import Image from "next/image";
@@ -31,10 +31,15 @@ export default function Chat() {
 
     return (
         <section className="text-white">
-            <div className="container max-w-4xl flex flex-col">
-                <div>
-                    <Link href="/home" className="w-32">
-                        <Image src={Logo} alt="Sonar Chatbot" width={1000} height={1000} />
+            <div className="container max-w-4xl flex flex-col mb-[300px]">
+                <div className="flex top-0 left-0 items-center">
+                    <Link href="/home" className="w-18">
+                        <Image src={Logo} alt="Sonar Chatbot" width={500} height={500} />
+                    </Link>
+                </div>
+                <div className="flex top-0 right-0 items-center mb-6">
+                    <Link href="/home">
+                        <Home className="h-5 w-5 text-gray-300 cursor-pointer hover:text-sky-700 duration-200" />
                     </Link>
                 </div>
                 {

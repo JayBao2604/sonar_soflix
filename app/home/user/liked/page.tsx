@@ -36,7 +36,7 @@ export default async function SongList() {
             <h1 className="text-white text-4xl font-bold mt-10 px-5 sm:px-0">
                 Your favourite songs
             </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-5 sm:px-0 mt-10 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-5 mt-12 mb-12 gap-6">
                 {data.map((song) => (
                     <div key={song.Song?.id} className="relative h-60">
                         <Image

@@ -86,14 +86,14 @@ async function getData(category: string, userId: string) {
 
 export default async function CategoryPage({
     params,
-}: {
+}: { 
     params: { genre: string };
 }) {
     const session = await auth();
     const data = await getData(params.genre, session?.user?.email as string);
 
     return (
-        <div className="grid grid-col-1 sm:grid-cols-2 md:grids-cols-3 lg:grid-cols-4 px-5 sm:px-0 mt-10 gap-6">
+        <div className="grid grid-col-1 sm:grid-cols-2 md:grids-cols-3 lg:grid-cols-4 px-5 mt-12 mb-[650px] gap-6">
             {data.map((song) => (
                 <div key={song.id} className="relative h-60">
                     <Image
@@ -104,7 +104,7 @@ export default async function CategoryPage({
                         className="rounded-sm absolute w-full h-full object-cover"
                     />
                 <div className="h-60 relative z-10 w-full transform transition duration-500 hover:scale-125 opacity-0 hover:opacity-100">
-                    <div className="bg-gradient-to-b from-transparent via-black/50 to-black z-10 w-full h-full rounded-lg flex items-center justify-center">
+                    <div className="bg-gradient-to-b from-transparent via-black/50 to-black z-10 w-full h-full rounded-lg flex items-center justify-center border">
                         <Image
                             src={song.imageString}
                             alt="Song"
