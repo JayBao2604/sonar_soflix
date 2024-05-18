@@ -76,6 +76,7 @@ model Song {
   ratingCount   Int        @default(0)
   Comment       Comemnt[]
   SongLists     SongList[]
+  userId        String?
 
   createdAt  DateTime     @default(now())
   SongAction SongAction[]

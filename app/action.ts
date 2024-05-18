@@ -37,3 +37,31 @@ export async function deleteFromSonglist(formData: FormData) {
   revalidatePath(pathname);
 }
 
+export async function createComment(formData: FormData) {
+  const session = await auth();
+
+  if (!session) {
+    return redirect("/login");
+  }
+
+  const comment = formData.get("comment") as string;
+  const songId = Number(formData.get("songId"));
+  const userEmail = session?.user?.email as string;
+
+  const user = await prisma.user.findUnique({
+    where: { email: userEmail },
+  });
+
+  if (!user) {
+    return redirect("/login");
+  }
+
+  const data = await prisma.comemnt.create({
+    data: {
+      text: comment,
+      userId: user.id,
+      songId: songId,
+    },
+  });
+  redirect(`/song/${songId}`);
+}

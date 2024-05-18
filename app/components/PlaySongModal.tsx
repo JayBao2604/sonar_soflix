@@ -29,7 +29,7 @@ import { db } from "@/lib/db";
     duration: string;
   }
   
-  export default function PlayVideoModal({
+  export default function PlaySongModal({
     changeState,
     album,
     state,

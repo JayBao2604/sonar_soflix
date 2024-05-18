@@ -4,6 +4,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Heart, PlayCircle } from "lucide-react";
 import PlaySongModal from "./PlaySongModal";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { addToSonglist, deleteFromSonglist } from "../action";
 import { usePathname } from "next/navigation";
 
@@ -32,11 +33,14 @@ export function SongCard({
   time,
   year,
 }: iAppProps) {
-  const [open, setOpen] = useState(false);
+  const router = useRouter();
   const pathName = usePathname();
+  const handlePlayCircleClick = () => {
+    router.push(`/song/${songId}`); 
+  };
   return (
     <>
-      <button onClick={() => setOpen(true)} className="-mt-14">
+      <button onClick={handlePlayCircleClick} className="-mt-14">
         <PlayCircle className="h-20 w-20" />
       </button>
 
@@ -73,19 +77,6 @@ export function SongCard({
           {singer}
         </p>
       </div>
-
-      <PlaySongModal
-        youtubeUrl={youtubeUrl}
-        key={songId}
-        title={title}
-        singer={singer}
-        state={open}
-        changeState={setOpen}
-        album={album}
-        artist={artist}
-        duration={time}
-        release={year}
-      />
     </>
   );
 }
