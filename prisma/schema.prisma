@@ -72,10 +72,13 @@ model Song {
   album         String
   category      String
   youtubeString String
+  rating        Float      @default(0)
+  ratingCount   Int        @default(0)
   Comment       Comemnt[]
   SongLists     SongList[]
 
-  createdAt DateTime @default(now())
+  createdAt  DateTime     @default(now())
+  SongAction SongAction[]
 }
 
 model SongList {
@@ -84,6 +87,17 @@ model SongList {
 
   Song   Song? @relation(fields: [songId], references: [id])
   songId Int?
+}
+
+model SongAction {
+  id     String @id @default(uuid())
+  userId String
+
+  Song   Song?  @relation(fields: [songId], references: [id])
+  songId Int?
+  type   String
+
+  @@unique([songId, userId])
 }
 
 model Comemnt {
@@ -99,6 +113,15 @@ model Comemnt {
 }
 
 model VerificationToken {
+  id      String   @id @default(cuid())
+  email   String
+  token   String   @unique
+  expires DateTime
+
+  @@unique([email, token])
+}
+
+model PasswordResetToken {
   id      String   @id @default(cuid())
   email   String
   token   String   @unique

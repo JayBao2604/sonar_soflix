@@ -23,7 +23,7 @@ import { Button } from '@/components/ui/button';
 import { FormError } from '../form-error';
 import { FormSuccess } from '../form-success';
 import { login } from '@/actions/login';
-
+import Link from 'next/link';
 import { getSession } from 'next-auth/react';
 
 import { useSearchParams } from 'next/navigation';
@@ -113,6 +113,16 @@ export const LoginForm = () => {
                                             type="password"
                                         />
                                     </FormControl>
+                                    <Button
+                                        size="sm"
+                                        variant={'link'}
+                                        asChild
+                                        className='px-0 font-normal'
+                                    >
+                                        <Link href="/reset">
+                                            Forgot Password?
+                                        </Link>
+                                    </Button>
                                     <FormMessage />
                                 </FormItem>
                             )}
