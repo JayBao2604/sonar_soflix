@@ -14,6 +14,12 @@ export const updateRating = async (songId: number, type: string) => {
             ratingCount: {
                 increment: 1,
             },
+            numberOfLikes: {
+                increment: type === "like" ? 1 : 0,
+            },
+            numberOfDislikes: {
+                increment: type === "dislike" ? 1 : 0,
+            },
         },
     });
 

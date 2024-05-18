@@ -7,6 +7,11 @@ import { Separator } from "@/components/ui/seperator";
 import Link from "next/link";
 import { SongCard } from "@/app/components/SongCard";
 import Image from "next/image";
+import { LikeDislike } from "@/app/components/LikeDislike";
+import { auth } from "@/auth";
+import { getSongAction, getSongFromId } from "@/data/like-dislike";
+
+import { PrismaClient } from '@prisma/client';
 
 interface iAppProps {
   title: string;
@@ -95,6 +100,10 @@ export default async function DisplaySong({
   const songId = parseInt(params.id, 10);
   const { data, recommendations } = await getData(songId);
 
+  const session = await auth();
+  const song = await getSongFromId(songId);
+  const songAction = await getSongAction(session?.user?.id ?? '', songId);
+
   return (
     <div className="max-w-full mx-auto flex justify-center mt-4 mb-10 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-[1500px] flex flex-col gap-y-5">
@@ -121,6 +130,24 @@ export default async function DisplaySong({
                 className="w-full h-[400px] sm:h-[700px]"
               ></iframe>
             </div>
+            
+
+            <div className="mt-5">
+              {session?.user?.id ? (
+                song && (
+                  <LikeDislike
+                    songId={songId}
+                    userId={session.user.id}
+                    numberOfLikes={song.numberOfLikes}
+                    numberOfDislikes={song.numberOfDislikes}
+                    songAction={songAction?.type}
+                  />
+                )
+              ) : (
+                <p>Please log in to like or dislike songs.</p>
+              )}
+            </div>
+
             <div className="flex gap-x-5 items-center mt-3">
               <div className="flex items-center gap-x-1">
                 <MessageCircle className="h-4 w-4 text-muted-foreground" />
@@ -129,7 +156,7 @@ export default async function DisplaySong({
                 </p>
               </div>
             </div>
-
+            
             <CommentForm songId={songId} />
 
             <Separator className="my-5" />

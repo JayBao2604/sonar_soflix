@@ -14,6 +14,12 @@ export const removeRating = async (songId: number, type: string) => {
             ratingCount: {
                 decrement: 1,
             },
+            numberOfLikes: {
+                decrement: type === "like" ? 1 : 0,
+            },
+            numberOfDislikes: {
+                decrement: type === "dislike" ? 1 : 0,
+            },
         },
     });
 
