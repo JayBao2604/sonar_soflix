@@ -16,12 +16,9 @@ interface linkProps {
 
 const links: linkProps[] = [
   { name: "Home", href: "/home" },
-  { name: "Podcasts", href: "/home/podcast" },
+  { name: "Podcast", href: "/home/podcast" },
   { name: "OST", href: "/home/ost" },
   { name: "Playlist", href: "/home/playlist" },
-];
-const linksLeft: linkProps[] = [
-  { name: "Search", href: "/search" }
 ];
 
 export default function Navbar() {
