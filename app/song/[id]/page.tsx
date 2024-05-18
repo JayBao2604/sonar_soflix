@@ -96,7 +96,7 @@ export default async function DisplaySong({
   const { data, recommendations } = await getData(songId);
 
   return (
-    <div className="max-w-full mx-auto flex justify-center mt-4 mb-10 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-full mx-auto flex justify-center mt-4 mb-5 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-[1500px] flex flex-col gap-y-5">
         <div className="flex top-0 right-0 mt-4 mr-4">
             <Link href="/home">
@@ -110,7 +110,7 @@ export default async function DisplaySong({
               <div className="line-clamp-3">{data.singer}</div>
               <div className="flex gap-x-2 items-center">
                 <p>{data.release}</p>
-                <p className="border py-0.5 px-1 border-gray-200 rounded">
+                <p className="border py-0.5 px-1 border-gray-200 rounded my-2">
                   {data.album}
                 </p>
                 <p>{data.duration}</p>

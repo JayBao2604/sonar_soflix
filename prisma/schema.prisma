@@ -61,22 +61,24 @@ model User {
 }
 
 model Song {
-  id            Int        @id
-  imageString   String
-  title         String
-  duration      String
-  artist        String
-  singer        String
-  release       Int
-  videoSource   String
-  album         String
-  category      String
-  youtubeString String
-  rating        Float      @default(0)
-  ratingCount   Int        @default(0)
-  Comment       Comemnt[]
-  SongLists     SongList[]
-  userId        String?
+  id               Int        @id
+  imageString      String
+  title            String
+  duration         String
+  artist           String
+  singer           String
+  release          Int
+  videoSource      String
+  album            String
+  category         String
+  youtubeString    String
+  rating           Float      @default(0)
+  ratingCount      Int        @default(0)
+  numberOfLikes    Int        @default(0)
+  numberOfDislikes Int        @default(0)
+  Comment          Comemnt[]
+  SongLists        SongList[]
+  userId           String?
 
   createdAt  DateTime     @default(now())
   SongAction SongAction[]
@@ -114,6 +116,15 @@ model Comemnt {
 }
 
 model VerificationToken {
+  id      String   @id @default(cuid())
+  email   String
+  token   String   @unique
+  expires DateTime
+
+  @@unique([email, token])
+}
+
+model PasswordResetToken {
   id      String   @id @default(cuid())
   email   String
   token   String   @unique

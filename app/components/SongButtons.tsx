@@ -1,8 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { InfoIcon, PlayCircle } from "lucide-react";
+import { PlayCircle } from "lucide-react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import PlaySongModal from "./PlaySongModal";
 
 interface iAppProps {
@@ -26,25 +27,15 @@ export default function SongButtons({
   title,
   youtubeUrl,
 }: iAppProps) {
-  const [open, setOpen] = useState(false);
+  const router = useRouter();
+  const handlePlayCircleClick = () => {
+    router.push(`/song/${id}`); 
+  };
   return (
     <>
-      <Button onClick={() => setOpen(true)} className="text-lg font-medium bg-white/40 hover:bg-white/30 text-white rounded-full">
+      <Button onClick={handlePlayCircleClick} className="text-lg font-medium bg-white/40 hover:bg-white/30 text-white rounded-full">
         <PlayCircle className="mr-2 h-6 w-6" /> Play
       </Button>
-
-      <PlaySongModal
-        state={open}
-        changeState={setOpen}
-        album={album}
-        duration={duration}
-        key={id}
-        singer={singer}
-        artist={artist}
-        release={releaseDate}
-        title={title}
-        youtubeUrl={youtubeUrl}
-      />
     </>
   );
 }

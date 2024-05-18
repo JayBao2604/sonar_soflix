@@ -1,14 +1,52 @@
-import { getData } from "../lib/action";
 import Image from "next/image";
-import { SongCard_NoSongList } from "./SongCard_NoSongList";
+import { SongCard } from "./SongCard";
+import prisma from "../utils/db";
+
+export const getData = async (query: string, userId: string) => {
+    try {
+      const fieldsToSearch = ['singer', 'title', 'album', 'category']; 
+      const conditions = fieldsToSearch.map(field => ({
+        [field]: {
+          contains: query,
+          mode: "insensitive",
+        },
+      }));
+  
+      const data = await prisma.song.findMany({
+        where: {
+          OR: conditions,
+        },
+        select: {
+            id: true,
+            singer: true,
+            title: true,
+            SongLists: {
+              where: {
+                userId: userId,
+              },
+            },
+            imageString: true,
+            youtubeString: true,
+            release: true,
+            duration: true,
+            album: true,
+            category: true,
+            artist: true,
+        }, 
+      });
+      return data;
+    } catch (error) {
+      throw new Error("Failed to fetch data");
+    }
+  };
 
 
 const SongList = async ({ 
-    query, 
+    query, userId
 }: {
-    query: string;
+    query: string; userId: string;
 }) => {
-    const data = await getData(query);
+    const data = await getData(query, userId);
     return (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 my-12 gap-6">
             {data.map((song) => (
@@ -31,11 +69,13 @@ const SongList = async ({
                             className="absolute w-full h-full -z-10 rounded-lg object-cover"
                         />
 
-                        <SongCard_NoSongList
+                        <SongCard
                             songId={song.id}
                             singer={song.singer}
                             title={song.title}
                             youtubeUrl={song.youtubeString}
+                            songListId={song.SongLists[0]?.id}
+                            songList={song.SongLists.length > 0 ? true : false}
                             key={song.id}
                             album={song.album}
                             artist={song.artist}

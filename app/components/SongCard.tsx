@@ -1,9 +1,7 @@
 "use client";
 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Heart, PlayCircle } from "lucide-react";
-import PlaySongModal from "./PlaySongModal";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { addToSonglist, deleteFromSonglist } from "../action";
 import { usePathname } from "next/navigation";

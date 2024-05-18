@@ -4,6 +4,7 @@ import Phone from '../../public/musical-note-on-phone-screen-svgrepo-com.png';
 import Lib from '../../public/music-library-svgrepo-com.png';
 import robot from '../../public/robot-svgrepo-com.png';
 import list from '../../public/list-heart-svgrepo-com.png';
+import Comment from '../../public/comment-text-svgrepo-com.png';
 
 export default function HomePage() {
     return (
@@ -83,6 +84,20 @@ export default function HomePage() {
           Có riêng cho mình danh sách những bài hát yêu thích nhất. Lưu lại và nghe bất cứ lúc nào.
         </p>
       </a>
+
+      <a
+        className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-500/10 hover:shadow-blue-500/10"
+        href="#"
+      >
+        <Image src={Comment} alt="comment" className="w-10 h-10" />
+
+        <h2 className="mt-4 text-xl font-bold text-white">Cùng nhau thảo luận về video bài hát</h2>
+
+        <p className="mt-1 text-sm text-gray-300">
+          Thảo luận với mọi người về video bài hát, cảm nhận và chia sẻ cảm xúc của bạn.
+        </p>
+      </a>
+
     </div>
 
     <div className="mt-12 text-center">
