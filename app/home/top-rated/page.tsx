@@ -11,6 +11,7 @@ async function getData(userId: string) {
         id: true,
         singer: true,
         title: true,
+        
         SongLists: {
           where: {
             userId: userId,
