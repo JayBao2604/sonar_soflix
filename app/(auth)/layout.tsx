@@ -1,4 +1,5 @@
-import { ReactNode } from "react"; 
+import { ReactNode } from "react";
+import Link from "next/link"; 
 import Image from "next/image";
 import BackgroundImage from "../../public/background_app.jpg";
 import Logo from "../../public/sonar.png";
@@ -13,14 +14,16 @@ export default function AuthLayout({children}: {children: ReactNode}) {
         fill
       />
 
-      <Image
-        src={Logo}
-        alt="Logo"
-        width={200}
-        height={200}
-        priority
-        className="absolute left-4 top-4 object-contain md:left-10 md:top-6"
-      />
+      <Link href="/">
+          <Image
+            src={Logo}
+            alt="Logo"
+            width={200}
+            height={200}
+            priority
+            className="absolute left-4 top-4 object-contain md:left-10 md:top-6"
+          />
+      </Link>
       {children}
     </div>
     );

@@ -26,6 +26,8 @@ async function getData() {
 export default async function SongVideo() {
   const data = await getData();
 
+
+
   return (
     <div className="h-[55vh] lg:h-[60vh] w-full flex justify-start items-center">
       <video

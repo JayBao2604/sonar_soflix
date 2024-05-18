@@ -64,13 +64,15 @@ const SearchPage = async ({
                     <Image className="w-[640px]" src={Logo} alt="Sonar logo" priority />
                 </Link>
             </div>
-            <div className="flex top-0 right-0 mb-8">
-                <Link href="/home" className="w-32">
-                    <Home className="w-8 h-8 text-sky-700 hover:text-white" />
-                </Link>
-            </div>
-            <div className="mt-auto max-w-[400px] mb-4 flex h-full w-full">
-                <SearchInput />
+            <div className="flex">
+                <div className="flex top-0 right-0 mb-4">
+                    <Link href="/home" className="w-32">
+                        <Home className="w-8 h-8 text-sky-700 hover:text-white" />
+                    </Link>
+                </div>
+                <div className="mt-auto max-w-[800px] mb-4 flex h-full w-[500px]">
+                    <SearchInput />
+                </div>
             </div>
             <div className="w-full max-w-[2000px]">
                 <Suspense key={query} fallback={<div>Loading...</div>}>

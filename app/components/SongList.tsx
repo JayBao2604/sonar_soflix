@@ -1,6 +1,6 @@
+import prisma from "../utils/db";
 import Image from "next/image";
 import { SongCard } from "./SongCard";
-import prisma from "../utils/db";
 
 export const getData = async (query: string, userId: string) => {
     try {
@@ -32,14 +32,13 @@ export const getData = async (query: string, userId: string) => {
             album: true,
             category: true,
             artist: true,
-        }, 
+          },
       });
       return data;
     } catch (error) {
       throw new Error("Failed to fetch data");
     }
   };
-
 
 const SongList = async ({ 
     query, userId
