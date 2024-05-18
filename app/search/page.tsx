@@ -5,45 +5,7 @@ import Image from "next/image";
 import Logo from "../../public/sonar.png";
 import Link from "next/link";
 import { Home } from "lucide-react";
-import prisma from "../utils/db";
-
-export const getData = async (query: string, userId: string) => {
-    try {
-      const fieldsToSearch = ['singer', 'title', 'album', 'category']; 
-      const conditions = fieldsToSearch.map(field => ({
-        [field]: {
-          contains: query,
-          mode: "insensitive",
-        },
-      }));
-  
-      const data = await prisma.song.findMany({
-        where: {
-          OR: conditions,
-        },
-        select: {
-            id: true,
-            singer: true,
-            title: true,
-            SongLists: {
-              where: {
-                userId: userId,
-              },
-            },
-            imageString: true,
-            youtubeString: true,
-            release: true,
-            duration: true,
-            album: true,
-            category: true,
-            artist: true,
-        }, 
-      });
-      return data;
-    } catch (error) {
-      throw new Error("Failed to fetch data");
-    }
-  };
+import { getData } from "./getSearchData";
 
 
 const SearchPage = async ({
@@ -64,15 +26,13 @@ const SearchPage = async ({
                     <Image className="w-[640px]" src={Logo} alt="Sonar logo" priority />
                 </Link>
             </div>
-            <div className="flex">
-                <div className="flex top-0 right-0 mb-4">
-                    <Link href="/home" className="w-32">
-                        <Home className="w-8 h-8 text-sky-700 hover:text-white" />
-                    </Link>
-                </div>
-                <div className="mt-auto max-w-[800px] mb-4 flex h-full w-[500px]">
-                    <SearchInput />
-                </div>
+            <div className="flex top-0 right-0 mb-8">
+                <Link href="/home" className="w-32">
+                    <Home className="w-8 h-8 text-sky-700 hover:text-white" />
+                </Link>
+            </div>
+            <div className="mt-auto max-w-[400px] mb-4 flex h-full w-full">
+                <SearchInput />
             </div>
             <div className="w-full max-w-[2000px]">
                 <Suspense key={query} fallback={<div>Loading...</div>}>
