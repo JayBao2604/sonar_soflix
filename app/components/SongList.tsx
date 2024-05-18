@@ -1,14 +1,52 @@
-import { getData } from "../lib/action";
+import prisma from "../utils/db";
 import Image from "next/image";
 import { SongCard_NoSongList } from "./SongCard_NoSongList";
 
+export const getData = async (query: string, userId: string) => {
+    try {
+      const fieldsToSearch = ['singer', 'title', 'album', 'category']; 
+      const conditions = fieldsToSearch.map(field => ({
+        [field]: {
+          contains: query,
+          mode: "insensitive",
+        },
+      }));
+  
+      const data = await prisma.song.findMany({
+        where: {
+          OR: conditions,
+        },
+        select: {
+            id: true,
+            singer: true,
+            title: true,
+            SongLists: {
+              where: {
+                userId: userId,
+              },
+            },
+            imageString: true,
+            youtubeString: true,
+            release: true,
+            duration: true,
+            album: true,
+            category: true,
+            artist: true,
+          },
+      });
+      return data;
+    } catch (error) {
+      throw new Error("Failed to fetch data");
+    }
+  };
 
 const SongList = async ({ 
     query, 
+    userId,
 }: {
-    query: string;
+    query: string; userId: string;
 }) => {
-    const data = await getData(query);
+    const data = await getData(query, userId);
     return (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 my-12 gap-6">
             {data.map((song) => (

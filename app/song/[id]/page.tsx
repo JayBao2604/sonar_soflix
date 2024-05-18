@@ -11,6 +11,8 @@ import { LikeDislike } from "@/app/components/LikeDislike";
 import { auth } from "@/auth";
 import { getSongAction, getSongFromId } from "@/data/like-dislike";
 
+import { getTotalDislikes, getTotalLikes } from "@/data/like-dislike";
+
 import { PrismaClient } from '@prisma/client';
 
 interface iAppProps {
@@ -104,6 +106,9 @@ export default async function DisplaySong({
   const song = await getSongFromId(songId);
   const songAction = await getSongAction(session?.user?.id ?? '', songId);
 
+  const totalLikes = await getTotalLikes(songId);
+  const totalDislikes = await getTotalDislikes(songId);
+
   return (
     <div className="max-w-full mx-auto flex justify-center mt-4 mb-10 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-[1500px] flex flex-col gap-y-5">
@@ -138,8 +143,8 @@ export default async function DisplaySong({
                   <LikeDislike
                     songId={songId}
                     userId={session.user.id}
-                    numberOfLikes={song.numberOfLikes}
-                    numberOfDislikes={song.numberOfDislikes}
+                    numberOfLikes={totalLikes ?? 0}
+                    numberOfDislikes={totalDislikes ?? 0}
                     songAction={songAction?.type}
                   />
                 )

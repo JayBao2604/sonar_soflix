@@ -4,6 +4,9 @@ import SongButtons from "./SongButtons";
 
 async function getData() {
   const data = await prisma.song.findFirst({
+    where: {
+      id: 0,
+    },
     select: {
       title: true,
       videoSource: true,
@@ -22,6 +25,8 @@ async function getData() {
 
 export default async function SongVideo() {
   const data = await getData();
+
+
 
   return (
     <div className="h-[55vh] lg:h-[60vh] w-full flex justify-start items-center">
