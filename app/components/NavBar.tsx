@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../public/sonar.png";
 import { usePathname } from "next/navigation";
-import { Bell, Search, Bot } from "lucide-react";
+import { Search, Bot } from "lucide-react";
 import UserNav from "./UserNav";
 import { useState } from "react";
 
@@ -86,7 +86,6 @@ export default function Navbar() {
         <Link href="/search">
           <Search className="h-5 w-5 text-gray-300 cursor-pointer hover:text-sky-700 duration-200" />
         </Link>
-        <Bell className="h-5 w-5 text-gray-300 cursor-pointer" />
         <UserNav /> 
       </div>
     </div>
