@@ -9,7 +9,9 @@ import { LoginForm } from "@/app/components/auth/login-form";
 
 const LoginPage = () => {
     return(
-        <LoginForm />
+        <div className="px-4 sm:px-6 md:px-8 lg:px-10">
+            <LoginForm />
+        </div>
     )
 }
 

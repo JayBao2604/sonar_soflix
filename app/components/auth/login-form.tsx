@@ -120,7 +120,7 @@ const LoginFormContent = () => {
                 <Button
                     disabled={isPending}
                     type='submit'
-                    className="bg-white text-black rounded-full lg:w-full sm:w-[1000px]"
+                    className="bg-white text-black rounded-full w-full"
                     style={{backgroundColor: '#24c8ff'}}
                 >
                     Login
@@ -132,14 +132,16 @@ const LoginFormContent = () => {
 
 export const LoginForm = () => (
     <Suspense fallback={<div>Loading...</div>}>
-        <CardWrapper
-            headerLabel="Welcome Back!"
-            backButtonLabel="Don't have an account?"
-            backButtonHref="/sign-up"
-            showSocial
-            topText="Log in"
-        >
-            <LoginFormContent />
-        </CardWrapper>
+        <div className="px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12">
+            <CardWrapper
+                headerLabel="Welcome Back!"
+                backButtonLabel="Don't have an account?"
+                backButtonHref="/sign-up"
+                showSocial
+                topText="Log in"
+            >
+                <LoginFormContent />
+            </CardWrapper>
+        </div>
     </Suspense>
 );
