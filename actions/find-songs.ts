@@ -1,11 +1,12 @@
 "use server";
 
 import { db } from "@/lib/db";
+import prisma from "@/app/utils/db";
 
-export const findSongs = async (id: string) => {
-    const data = await db.songList.findMany({
+export const findSongs = async (userId: string) => {
+    const data = await prisma.songList.findMany({
         where: {
-            userId: id,
+            userId: userId,
         },
         select: {
             Song: {

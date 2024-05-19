@@ -28,7 +28,7 @@ async function getData(userId: string) {
     return data;
 }
 
-export default async function SongList() {
+export default async function LovedSong() {
     const session = await auth();
     const data = await getData(session?.user?.email as string);
     return (

@@ -14,7 +14,7 @@ import ProfileComp from '@/app/components/ProfileComponent';
 import { auth } from "@/auth"
 
 const ProfilePage = async () => {
-    const session = await auth();
+    const session = await auth(); 
 
     const data = await findSongs(session?.user?.email as string);
 
