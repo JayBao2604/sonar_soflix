@@ -26,7 +26,7 @@ const SearchInput = () => {
                 Search
             </label>
             <input
-                className="peer block w-full rounded border text-black border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
+                className="peer block w-full  lg:w-96  rounded border text-black border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
                 placeholder="Find a song you want"
                 defaultValue={searchParams.get('query')?.toString()}
                 onChange={(e) => {
