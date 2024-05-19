@@ -25,7 +25,7 @@ export const CardWrapper = ({
     topText,
 }: CardWrapperProps) => {
     return (
-        <Card className="w-[400px] shadow-md" style={{backgroundColor: 'black', boxShadow: 'none', border: 'none'}}>
+        <Card className="mt-16 sm:mt-0 w-full sm:w-[400px] shadow-md" style={{backgroundColor: 'black', boxShadow: 'none', border: 'none'}}>
             <CardHeader>
                 <Header label={headerLabel} text={topText}/>
             </CardHeader>
