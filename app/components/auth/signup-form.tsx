@@ -32,9 +32,10 @@ export const SignupForm = () => {
     const form = useForm<z.infer<typeof SignUpSchema>>({
         resolver: zodResolver(SignUpSchema),
         defaultValues: {
-            email: '',
+            loginName: '',
             password: '',
             name: '',
+            email: '',
         }
     })
 
@@ -45,8 +46,10 @@ export const SignupForm = () => {
         startTransition(() => {
             signup(values)
             .then ((data) => {
-                setError(data.error);
-                setSuccess(data.success);
+                if (data) {
+                    setError(data.error);
+                    setSuccess(data.success);
+                }
             });
         });
     }
@@ -84,6 +87,7 @@ export const SignupForm = () => {
                                 </FormItem>
                             )}
                         />
+
                         <FormField
                             control={form.control}
                             name="email"
@@ -95,8 +99,28 @@ export const SignupForm = () => {
                                     <FormControl>
                                         <Input className="bg-white text-black rounded-full"
                                             {...field}
-                                            placeholder='trangiabao@example.com'
-                                            type="email"
+                                            placeholder='trangiabao@gmail.com'
+                                            disabled={isPending}
+                                            type='email'
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+
+                        <FormField
+                            control={form.control}
+                            name="loginName"
+                            render = {({ field }) => (
+                                <FormItem>
+                                    <FormLabel style={{color: 'white'}}>
+                                        Login Name
+                                    </FormLabel>
+                                    <FormControl>
+                                        <Input className="bg-white text-black rounded-full"
+                                            {...field}
+                                            placeholder='BaoTran2904'
                                             disabled={isPending}
                                         />
                                     </FormControl>
@@ -127,7 +151,7 @@ export const SignupForm = () => {
                     </div>
                     <FormError message={error}/>
                     <FormSuccess message={success}/>
-                    <div className='mt-4'/>
+                    <div className=''/>
                     <Button
                     disabled={isPending}
                     type='submit'

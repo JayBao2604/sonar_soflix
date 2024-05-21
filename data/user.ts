@@ -21,3 +21,14 @@ export const getUserById = async (id: string) => {
         return null;
     }
 }
+
+export const getUserByLoginName = async (loginName: string) => {
+    try {
+        const user = await db.user.findFirst({ where: { loginname: loginName } });
+
+        return user;
+    }
+    catch{
+        return null;
+    }
+}
