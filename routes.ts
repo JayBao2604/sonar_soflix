@@ -1,6 +1,7 @@
 export const publicRoutes = [
     "/",
-    "/new-verification"
+    "/new-verification",
+    "/home/policy"
 ]
 
 export const authRoutes = [
