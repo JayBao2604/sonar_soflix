@@ -19,7 +19,7 @@ const links: linkProps[] = [
   { name: "Podcast", href: "/home/podcast" },
   { name: "OST", href: "/home/ost" },
   { name: "Playlist", href: "/home/playlist" },
-  { name: "Top Rated", href: "/home/top-rated" },
+  //{ name: "Top Rated", href: "/home/top-rated" },
 ];
 
 export default function Navbar() {
