@@ -41,7 +41,7 @@ export const Social = () => {
             >
                 <FaGithub className="w-5 h-5" />
             </Button>
-            
+
 
         </div>    
     )
