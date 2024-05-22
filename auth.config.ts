@@ -7,12 +7,12 @@ import Facebook from "next-auth/providers/facebook";
 
 import { LoginSchema } from "./schemas";
 import { getUserByLoginName } from "./data/user";
- 
+
 export default { providers: [
     Google({
         clientId: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    
+
     }),
     Github({
         clientId: process.env.GITHUB_CLIENT_ID,
