@@ -6,6 +6,7 @@ import {
     Dialog,
     DialogContent,
     DialogHeader,
+    DialogDescription,
     DialogTitle,
 } from "@/components/ui/dialog";
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
@@ -16,10 +17,9 @@ import { FaPen } from "react-icons/fa";
 interface EditProps {
     state: boolean;
     changeState: (state: boolean) => void;
-    refreshSession: () => void;
 }
 
-const EditModal = ({ state, changeState, refreshSession }: EditProps) => {
+const EditModal = ({state, changeState} : EditProps) => {
     const { data: session } = useSession();
     const [username, setUsername] = useState('');
     const [isHovered, setIsHovered] = useState(false);
@@ -76,8 +76,8 @@ const EditModal = ({ state, changeState, refreshSession }: EditProps) => {
     const handleSaveClick = async () => {
         if (session?.user?.id) {
             await updateInfo(selectedFileUrl, username, session?.user?.id);
-            await refreshSession(); // Call the refreshSession function after updating the info
-            changeState(false); // Close the modal
+            await getSession();
+            setShowConfirmationDialog(true);
         }
     };
 
