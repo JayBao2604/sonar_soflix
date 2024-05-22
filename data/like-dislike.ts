@@ -1,4 +1,5 @@
 import { db } from '@/lib/db';
+import error from 'next/error';
 
 
 export const getSongFromId = async (id: number) => {
@@ -43,7 +44,8 @@ export const getTotalLikes = async (songId: number) => {
 
         return likes;
     }
-    catch {
+    catch (error) {
+        console.error(`Error fetching likes for song ID ${songId}:`, error);
         return null;
     }
 }
