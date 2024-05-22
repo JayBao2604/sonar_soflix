@@ -35,7 +35,7 @@ const LoginFormContent = () => {
     const form = useForm<z.infer<typeof LoginSchema>>({
         resolver: zodResolver(LoginSchema),
         defaultValues: {
-            email: '',
+            loginName: '',
             password: '',
         }
     });
@@ -63,18 +63,17 @@ const LoginFormContent = () => {
                 <div className='space-y-4'>
                     <FormField
                         control={form.control}
-                        name="email"
+                        name="loginName"
                         render={({ field }) => (
                             <FormItem className="w-full">
                                 <FormLabel style={{color: 'white'}}>
-                                    Email
+                                    Login Name
                                 </FormLabel>
                                 <FormControl>
                                     <Input
                                         {...field}
                                         className="bg-white text-black rounded-full"
-                                        placeholder='trangiabao@example.com'
-                                        type="email"
+                                        placeholder='BaoTran2904'
                                         disabled={isPending}
                                     />
                                 </FormControl>

@@ -1,11 +1,11 @@
-import { getMostLikedSongs, getTotalLikes } from "@/data/like-dislike";
+import { getTotalLikes } from "@/data/like-dislike";
 import { auth } from "@/auth";
 import Image from "next/image";
 import { SongCard2 } from "@/app/components/SongCard";
 import prisma from "@/app/utils/db";
 
 async function getData() {
-  const data = await prisma.song.findMany({
+  const songs = await prisma.song.findMany({
     select: {
       id: true,
       singer: true,
@@ -22,15 +22,19 @@ async function getData() {
     },
   });
 
-  const songsWithLikes = await Promise.all(data.map(async (song) => {
-    const totalLikes = await getTotalLikes(song.id);
-    return { ...song, totalLikes: totalLikes || 0 };
+  const likesPromises = songs.map(song => getTotalLikes(song.id));
+  const likes = await Promise.all(likesPromises);
+
+  const songsWithLikes = songs.map((song, index) => ({
+    ...song,
+    totalLikes: likes[index] || 0,
   }));
 
   const sortedSongs = songsWithLikes.sort((a, b) => b.totalLikes - a.totalLikes);
 
   return sortedSongs.slice(0, 8);
 }
+
 
 const TopRatedPage = async () => {
   const data = await getData();

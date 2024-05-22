@@ -36,6 +36,10 @@ export default function Footer() {
       <li>
         <a className="text-white transition hover:text-white/75" href="#"> Blog </a>
       </li>
+
+      <li>
+        <a className="text-white transition hover:text-white/75" href="/home/policy"> Privacy Policy </a>
+      </li>
     </ul>
 
     <ul className="mt-12 flex justify-center gap-6 md:gap-8">
