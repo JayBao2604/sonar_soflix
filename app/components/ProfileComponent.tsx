@@ -1,10 +1,9 @@
 "use client";
 
-import React from 'react';
-import { useSession } from 'next-auth/react';
+import React, { useState, useEffect } from 'react';
+import { useSession, getSession } from 'next-auth/react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import EditButton from '@/app/components/EditButton';
-import { useState } from 'react';
 import EditModal from '@/app/components/EditModal';
 import { findSongs } from '@/actions/find-songs';
 import { SongCard } from "@/app/components/SongCard";
@@ -39,10 +38,10 @@ const ProfileComp = () => {
             {isModalOpen && <EditModal state={isModalOpen} changeState={handleModalChange} />}
 
             <div className='mt-20'>
-                
+
             </div>
         </div>
-    );
+  );
 };
 
 export default ProfileComp;

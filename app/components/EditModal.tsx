@@ -1,30 +1,22 @@
 "use client";
 
-import axios from 'axios';
-
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
+    DialogDescription,
     DialogTitle,
 } from "@/components/ui/dialog";
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-
 import { updateInfo } from '@/actions/update-info';
-import { getSession } from 'next-auth/react';
-
-import { useSession } from 'next-auth/react';
+import { useSession, getSession } from 'next-auth/react';
 import { FaPen } from "react-icons/fa";
-
-import { useEffect } from 'react';
 
 interface EditProps {
     state: boolean;
     changeState: (state: boolean) => void;
-
 }
 
 const EditModal = ({state, changeState} : EditProps) => {
@@ -43,18 +35,16 @@ const EditModal = ({state, changeState} : EditProps) => {
         } else {
             setSelectedFileUrl("https://static.vecteezy.com/system/resources/previews/009/292/244/original/default-avatar-icon-of-social-media-user-vector.jpg");
         }
-
     }, [session]);
 
     const handleDialogOpenChange = (isOpen: boolean) => {
         changeState(!state);
     };
 
-
     const handleAvatarClick = () => {
         fileInputRef.current?.click();
     };
-    
+
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0] || null;
         setSelectedFile(file);
@@ -65,10 +55,7 @@ const EditModal = ({state, changeState} : EditProps) => {
         } else {
             setSelectedFileUrl(session?.user?.image ? session.user.image : "https://static.vecteezy.com/system/resources/previews/009/292/244/original/default-avatar-icon-of-social-media-user-vector.jpg");
         }
-
     };
-
-    
 
     const handleMouseOver = () => {
         setIsHovered(true);
@@ -80,22 +67,17 @@ const EditModal = ({state, changeState} : EditProps) => {
 
     const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setUsername(event.target.value);
-
     };
 
     const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedFileUrl(event.target.value);
-
     };
 
     const handleSaveClick = async () => {
-        if(session?.user?.id)
-        {
-            console.log(selectedFileUrl);
+        if (session?.user?.id) {
             await updateInfo(selectedFileUrl, username, session?.user?.id);
             await getSession();
             setShowConfirmationDialog(true);
-
         }
     };
 
@@ -103,14 +85,13 @@ const EditModal = ({state, changeState} : EditProps) => {
         setShowConfirmationDialog(false);
         handleDialogOpenChange(false);
     };
-    
 
     return (
         <>
             <Dialog open={state} onOpenChange={handleDialogOpenChange}>
                 <DialogContent>
                     <DialogHeader>
-                    <DialogTitle className="text-3xl">Edit Profile</DialogTitle>
+                        <DialogTitle className="text-3xl">Edit Profile</DialogTitle>
                     </DialogHeader>
                     <div className='mt-5 flex'>
                         <div className="relative" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
@@ -154,7 +135,7 @@ const EditModal = ({state, changeState} : EditProps) => {
                     </div>
                     <div className='w-full justify-end flex mt-10'>
                         <p className='mr-10 mt-2 text-slate-600'>Avatar File Upload is WIP!</p>
-                        <Button onClick={handleSaveClick} className=" rounded-[10px] w-[220px] items-center">Save</Button>
+                        <Button onClick={handleSaveClick} className="rounded-[10px] w-[220px] items-center">Save</Button>
                     </div>
                 </DialogContent>
             </Dialog>
