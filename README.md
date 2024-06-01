@@ -18,9 +18,9 @@ cd ./sonar_soflix
 
 
 ```bash
-DATABASE_URL=[URL ĐƯỢC LẤY TỪ TRONG SUPABASE THEO PROJECT CỦA BẠN]
+DATABASE_URL="postgres://postgres.bcrxqnfmoeygfezttpeo:@JayHacker26@@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres"
 
-AUTH_SECRET=[AUTH_SECRET ĐƯỢC LẤY TỪ PROJECT CỦA BẠN]
+AUTH_SECRET=idig9qhu5F5TOYQRn/zPSlv8b+0E9QNcR9+wAR0WJGo=
 
 GITHUB_CLIENT_ID=[GITHUB CLIENT ID CỦA BẠN]
 GITHUB_CLIENT_SECRET=[GITHUB CLIENT SECRET CỦA BẠN]
