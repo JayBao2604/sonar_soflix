@@ -1,4 +1,4 @@
-# Hướng dẫn setup môi trường:
+# 1. Hướng dẫn setup môi trường:
 
 ## 1. Clone repository về máy: Lấy link của github này và sau đó chọn nơi mình muốn lưu trong máy tính và bật Command Prompt (CMD), dùng lệnh sau:
 ```bash
@@ -60,7 +60,7 @@ bun dev
 
 Mở [http://localhost:3000](http://localhost:3000) với trình duyệt bạn muốn và xem kết quả.
 
-# Các công cụ hỗ trợ:
+# 2. Các công cụ hỗ trợ:
 
 ## 1. Auth.js
   Auth.js (trước đây là Next Auth) là một thư viện không phụ thuộc vào runtime, dựa trên các API Web tiêu chuẩn và tích hợp sâu với nhiều framework JavaScript hiện đại để cung cấp trải nghiệm xác thực đơn giản dễ bắt đầu, dễ mở rộng, đảm bảo riêng tư và an toàn!
@@ -162,7 +162,7 @@ Mở [http://localhost:3000](http://localhost:3000) với trình duyệt bạn m
   ### Tham khảo tài liệu:
   Để biết thêm nhiều thông tin chi tiết, các bạn có thể vào [Tailwind CSS](https://tailwindcss.com/) - Trang web Tailwind CSS
   
-# Tính năng của web:
+# 3. Tính năng của web:
 - Thưởng thức nhiều thể loại âm nhạc khác nhau như: Pop, OST, Playlist, Postcast,...
 - Trải nghiệm cảm giác nghe nhạc và xem video dựng nên từ bài hát đó
 - Có riêng cho mình danh sách yêu thích để có thể nghe lại
@@ -175,14 +175,14 @@ Mở [http://localhost:3000](http://localhost:3000) với trình duyệt bạn m
 - Có thể đăng ký tài khoản dựa vào tài khoản Github
 - Mỗi khi xem một video âm nhạc sẽ có những đề xuất bài hát liên quan đến video đó ở sau phần Comment
 
-# Danh sách thành viên nhóm:
+# 4. Danh sách thành viên nhóm:
 | Họ và tên                   | MSSV       | Chức vụ     |
 |-----------------------------|------------|-------------|
 | Trần Gia Bảo                | 22520119   | Trưởng nhóm |
 | Hoàng Vũ                    | 22521690   | Thành viên  |
 
 
-# Deployment:
+# 5. Deployment:
 Web của nhóm mình được deploy trên Vercel - là một nền tảng tiên tiến dành cho việc triển khai và quản lý các ứng dụng Web, đặc biệt nổi bật với các dự án tĩnh và ứng dụng xây dựng bằng Next.js
 
 ![vercel](https://github.com/JayBao2604/sonar_soflix/assets/127290366/b0cef0bf-3676-4205-bea3-bf30d71ca57b)
@@ -230,7 +230,7 @@ Sau khi cấu hình xong, bạn chỉ cần nhấn nút "Deploy". Vercel sẽ t�
 ### 6. Theo dõi và quản lý triển khai:
 Sau khi triển khai, bạn có thể theo dõi trạng thái triển khai, kiểm tra log, và quản lý các phiên bản triển khai trong bảng điều khiển của Vercel.
 
-# Hình chụp các tiêu chí cộng điểm:
+# 6. Hình chụp các tiêu chí cộng điểm:
 ## 1. Video Seminar:
 ![Screenshot 2024-06-01 191421](https://github.com/JayBao2604/sonar_soflix/assets/127290366/275d839b-da0b-48ab-ad3e-bfee5894409a)
 
@@ -241,7 +241,7 @@ Sau khi triển khai, bạn có thể theo dõi trạng thái triển khai, ki�
 ### Đối với di động:
 ![Screenshot 2024-06-01 175332](https://github.com/JayBao2604/sonar_soflix/assets/127290366/99e0ec23-4f41-4dd1-9476-0e671cc41a92)
 
-# Learn More
+# 7. Learn More
 
 Để tìm hiểu thêm về Next.js, hãy xem các tài nguyên sau:
 
