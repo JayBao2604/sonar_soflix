@@ -27,15 +27,78 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 # Các công cụ hỗ trợ:
 
 ## 1. Auth.js
+  
+
 
 ## 2. Prisma:
+  Prisma là một ORM (Object-Relational Mapping) hiện đại dành cho Node.js và Typescript, là một hệ sinh thái hoàn chỉnh giúp bạn quản lý dữ liệu một cách hiệu quả và tin cậy. Nó giúp bạn làm việc với cơ sở dữ liệu một cách dễ dàng hơn thông qua việc cung cấp các công cụ và API trực quan.
+  ### Tính năng chính:
+  - Data Modeling: Sử dụng schema.prisma để định nghĩa cấu trúc dữ liệu
+  - Migrations: Tạo và quản lý các migrations để cập nhật cơ sở dữ liệu
+  - Type Security: Cung cấp tự động các kiểu TypeScript cho các mô hình dữ liệu
+  - Query Building: Hỗ trợ các câu truy vấn SQL thông qua API dễ sử dụng, tạo các câu truy vấn CRUD (Create, Read, Update, Delete)
+  - Database Support: Hỗ trợ nhiều loại cơ sở dữ liệu như PostgreSQL, MySQL, SQLite, SQL Server, MongoDB,...
+  - Prisma Studio: Giao diện người dùng trực quan giúp quản lý và tương tác với dữ liệu trong cơ sở dữ liệu.
+
+  ### Một số lợi ích mang lại:
+  - An toàn và đáng tin cậy: Prisma giúp tránh các lỗi do sai sót về kiểu dữ liệu và cấu trúc truy vấn
+  - Tích hợp dễ dàng: Prisma hoạt động tốt với nhiều hệ quản trị cơ sở dữ liệu và tích hợp dễ dàng với các công cụ phát triển khác.
+  - Năng suất cao hơn: Với các công cụ tự động và giao diện thân thiện, bạn có thể tập trung vào việc phát triển tính năng thay vì quản lý cơ sở dữ liệu.
+
+  ### Tham khảo tài liệu:
+  Để biết thêm nhiều thông tin chi tiết, các bạn có thể vào [Prisma](https://www.prisma.io/) - Trang web Prisma
 
 ## 3. Supabase:
+  Supabase là một nền tảng mã nguồn mở được thiết kế để cung cấp các dịch vụ backend cho các ứng dụng web và di động hay còn gọi là nền tảng backend-as-a-service (Baas). Nó được biết đến như một giải pháp thay thế mã nguồn mở cho Firebase, cung cấp các tính năng tương tự nhưng với sự linh hoạt hơn và khả năng tùy chỉnh cao hơn. Supabase xây dựng dựa trên PostgreSQL, một trong những hệ quản trị cơ sở dữ liệu quan hệ mạnh mẽ và phổ biến nhất, và cung cấp nhiều tính năng để phát triển ứng dụng một cách nhanh chóng và hiệu quả.
+  ### Một số điểm nổi bật:
+  - Cơ sở dữ liệu PostgreSQL: Sử dụng PostgreSQL làm cơ sở dữ liệu nền tảng, cung cấp đầy đủ các tính năng mạnh mẽ của PostgreSQL như JSONB, full-text search, và các extension như PostGIS.
+  - API tự động: Tự động tạo ra RESTful API cho cơ sở dữ liệu của bạn dựa trên các bảng và schema bạn đã thiết lập, giúp bạn dễ dàng thao tác dữ liệu thông qua các endpoint API mà không cần viết mã backend.
+  - Realtime: Cung cấp tính năng realtime, cho phép bạn theo dõi các thay đổi trong cơ sở dữ liệu và cập nhật ứng dụng của mình ngay lập tức khi có thay đổi xảy ra.
+  - Authentication và Authorization: Cung cấp các dịch vụ xác thực và phân quyền, hỗ trợ nhiều phương thức đăng nhập như email/password, OAuth (Google, GitHub, v.v.), giúp quản lý người dùng và bảo mật ứng dụng dễ dàng hơn.
+  - Storage: Cung cấp dịch vụ lưu trữ đối tượng (object storage), cho phép bạn lưu trữ và quản lý các tệp tin như hình ảnh, video, và tài liệu một cách an toàn và hiệu quả.
+  - Mã nguồn mở: Cho phép các nhà phát triển đóng góp, tùy chỉnh và kiểm tra mã nguồn, tạo sự minh bạch và linh hoạt trong phát triển.
 
-## 3. Shadcn/UI:
+  ### Lợi ích:
+  - Triển khai nhanh chóng mà không cần cấu hình phức tạp.
+  - Tích hợp nhiều tính năng trong một nền tảng
+  - Mã nguồn mở và minh bạch
 
-## 4. Tailwind CSS:
+  ### Tham khảo tài liệu:
+  Để biết thêm nhiều thông tin chi tiết, các bạn có thể vào [Supabase](https://supabase.com/) - Trang web Supabase
+  
+## 4. Shadcn/UI:
+  Shadcn/UI là một thư viện giao diện người dùng (UI) xây dựng trên React, cung cấp các thành phần UI có thể tái sử dụng. 
+  ### Tính năng chính:
+  - Component Library: Cung cấp nhiều thành phần UI như buttons, forms, modals, v.v.
+  - Customizable: Dễ dàng tùy biến theo nhu cầu của dự án.
+  - Responsive Design: Hỗ trợ thiết kế responsive cho nhiều thiết bị.
+  - Accessibility: Tuân thủ các tiêu chuẩn về accessibility.
 
+  ### Lợi ích:
+  - Tăng tốc độ phát triển front-end.
+  - Dễ dàng tích hợp và mở rộng.
+  - Thiết kết nhất quán hơn và hiện đại hơn.
+
+  ### Tham khảo tài liệu:
+  Để biết thêm nhiều thông tin chi tiết, các bạn có thể vào [Shadcn/UI](https://ui.shadcn.com/) - Trang web Shadcn/UI
+## 5. Tailwind CSS:
+  Taiwind CSS là một framework CSS mã nguồn mở tiện dụng giúp bạn xây dựng nhanh chóng các giao diện người dùng mà không cần viết nhiều CSS thủ công.
+  ### Tính năng chính:
+  - Utility-First Fundamentals: Sử dụng các lớp tiện ích để tạo kiểu trực tiếp trong HTML
+  - Responsive Design: Sử dụng các biến thể tiện ích đáp ứng để xây dựng giao diện người dùng thích ứng.
+  - Dark Mode: Tối ưu hóa trang web của bạn cho chế độ tối trực tiếp trong HTML bằng công cụ sửa đổi chế độ tối.
+  - Reusing Styles: Quản lý sự trùng lặp và tạo ra các bản tóm tắt có thể tái sử dụng.
+  - Adding Custom Styles: Tùy chỉnh framework để phù hợp với thương hiệu của mình và mở rộng nó với phong cách tùy chỉnh của riêng mình.
+  - Plugin System: Hỗ trợ các plugin để thêm các chức năng và thành phần tùy chỉnh.
+
+  ### Lợi ích:
+  - Giảm bớt việc viết CSS thủ công.
+  - Thiết kế nhất quán và có thể mở rộng.
+  - Tạo cho riêng mình thương hiệu.
+  - Hỗ trợ nhiều tính năng giúp trang web thêm sinh động, phong phú.
+
+  ### Tham khảo tài liệu:
+  Để biết thêm nhiều thông tin chi tiết, các bạn có thể vào [Tailwind CSS](https://tailwindcss.com/) - Trang web Tailwind CSS
 # Tính năng của web:
 -
 -
