@@ -1,13 +1,33 @@
 # Hướng dẫn setup môi trường:
 
-## 1. Lấy link của github này và sau đó chọn nơi mình muốn lưu trong máy tính và bật Command Prompt (CMD), dùng lệnh sau:
+## 1. Clone repository về máy: Lấy link của github này và sau đó chọn nơi mình muốn lưu trong máy tính và bật Command Prompt (CMD), dùng lệnh sau:
 ```bash
 git clone https://github.com/JayBao2604/sonar_soflix.git
 ```
 ### Lưu ý: 
 Bạn phải tải Git về máy tính của bạn, nếu như chưa cài đặt Git thì bạn có thể thực hiện theo [How to Install Git](https://kinsta.com/knowledgebase/install-git/) - hướng dẫn cách cài đặt
 
-## 2. Tùy vào packet manager mà sử dụng lệnh phù hợp:
+## 2. Thêm file môi trường:
+- Tạo 1 file tên .env trong local repository
+- Nhập vào file .env vừa tạo:
+
+"
+DATABASE_URL="postgres://postgres.bcrxqnfmoeygfezttpeo:@JayHacker26@@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres"
+
+AUTH_SECRET=idig9qhu5F5TOYQRn/zPSlv8b+0E9QNcR9+wAR0WJGo=
+
+GITHUB_CLIENT_ID=[GITHUB CLIENT ID CỦA BẠN]
+GITHUB_CLIENT_SECRET=[GITHUB CLIENT SECRET CỦA BẠN]
+
+GOOGLE_API_KEY=[GOOGLE API KEY CỦA BẠN]
+OPENAI_API_KEY=[OPENAI API KEY CỦA BẠN]
+"
+
+Cách tạo app Github và lấy Github Client Id, Github Client Secret: [Github](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authenticating-to-the-rest-api-with-an-oauth-app)
+Cách lấy Google API Key và OpenAI API Key:
+
+
+## 3. Bật Live Server: Tùy vào packet manager mà sử dụng lệnh phù hợp:
 ```bash
 npm run dev
 # or
