@@ -80,10 +80,10 @@ export default function Navbar() {
       </div>
     
       <div className="flex right-0 top-0 items-center gap-x-6 md:gap-x-8">
-        <Link href="/boxchat">
+        <Link href="/home/boxchat">
           <Bot className="h-5 w-5 text-gray-300 cursor-pointer hover:text-sky-700 duration-200" />
         </Link>
-        <Link href="/search">
+        <Link href="/home/search">
           <Search className="h-5 w-5 text-gray-300 cursor-pointer hover:text-sky-700 duration-200" />
         </Link>
         <UserNav /> 

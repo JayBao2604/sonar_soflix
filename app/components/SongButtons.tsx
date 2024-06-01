@@ -29,7 +29,7 @@ export default function SongButtons({
 }: iAppProps) {
   const router = useRouter();
   const handlePlayCircleClick = () => {
-    router.push(`/song/${id}`); 
+    router.push(`/home/song/${id}`); 
   };
   return (
     <>

@@ -112,11 +112,6 @@ export default async function DisplaySong({
   return (
     <div className="max-w-full mx-auto flex justify-center mt-4 mb-5 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-[1500px] flex flex-col gap-y-5">
-        <div className="flex top-0 right-0 mt-4 mr-4">
-            <Link href="/home">
-                <Home className="text-blue-500 hover:text-white"/>
-            </Link>
-        </div>
         <Card className="p-4 w-full sm:w-3/4 lg:w-3/5 mx-auto">
           <div className="p-2 w-full">
             <h1 className="font-medium mt-1 text-lg">{data.title}</h1>

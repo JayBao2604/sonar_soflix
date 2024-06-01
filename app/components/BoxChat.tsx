@@ -37,11 +37,6 @@ export default function Chat() {
                         <Image src={Logo} alt="Sonar Chatbot" width={500} height={500} />
                     </Link>
                 </div>
-                <div className="flex top-0 right-0 items-center mb-6">
-                    <Link href="/home">
-                        <Home className="h-5 w-5 text-gray-300 cursor-pointer hover:text-sky-700 duration-200" />
-                    </Link>
-                </div>
                 {
                     error && (
                         <div className="text-sm text-sky-700 text-center p-2">{error.message}</div>

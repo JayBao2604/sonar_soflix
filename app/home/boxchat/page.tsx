@@ -1,4 +1,4 @@
-import Chat from "../components/BoxChat";
+import Chat from "../../components/BoxChat";
 
 const BoxChatAI = () => {
   return (

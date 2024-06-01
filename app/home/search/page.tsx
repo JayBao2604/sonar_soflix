@@ -1,8 +1,8 @@
-import SearchInput from "../components/SearchInput";
+import SearchInput from "../../components/SearchInput";
 import { Suspense } from "react";
-import SongList from "../components/SongList";
+import SongList from "../../components/SongList";
 import Image from "next/image";
-import Logo from "../../public/sonar.png";
+import Logo from "../../../public/sonar.png";
 import Link from "next/link";
 import { Home } from "lucide-react";
 import { getData } from "./getSearchData";
@@ -27,10 +27,6 @@ const SearchPage = async ({
                     </Link>
                 </div>
                 <div className="flex top-0 right-0 mb-8">
-                    
-                    <Link href="/home" className="w-32 ml-4">
-                        <Home className="w-8 h-8 text-sky-700 hover:text-white" />
-                    </Link>
                     <SearchInput />
                 </div>
                 <div className="mt-auto max-w-[400px] mb-4 flex h-full w-full">

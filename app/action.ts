@@ -63,5 +63,5 @@ export async function createComment(formData: FormData) {
       songId: songId,
     },
   });
-  redirect(`/song/${songId}`);
+  redirect(`/home/song/${songId}`);
 }

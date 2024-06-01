@@ -37,7 +37,7 @@ export function SongCard({
   const router = useRouter();
   const pathName = usePathname();
   const handlePlayCircleClick = () => {
-    router.push(`/song/${songId}`); 
+    router.push(`/home/song/${songId}`); 
   };
   return (
     <>
@@ -112,7 +112,7 @@ export function SongCard2({
   const router = useRouter();
   const pathName = usePathname();
   const handlePlayCircleClick = () => {
-    router.push(`/song/${songId}`); 
+    router.push(`/home/song/${songId}`); 
     
   };
   return (
