@@ -7,9 +7,15 @@ git clone https://github.com/JayBao2604/sonar_soflix.git
 ### Lưu ý: 
 Bạn phải tải Git về máy tính của bạn, nếu như chưa cài đặt Git thì bạn có thể thực hiện theo [How to Install Git](https://kinsta.com/knowledgebase/install-git/) - hướng dẫn cách cài đặt
 
-## 2. Thêm file môi trường:
+## 2. Chuyển directory của command prompt vào thư mục vừa được git clone, dùng lệnh sau:
+```bash
+cd ./sonar_soflix
+```
+
+## 3. Thêm file môi trường:
 - Tạo 1 file tên .env trong local repository
 - Nhập vào file .env vừa tạo:
+
 
 "
 DATABASE_URL="postgres://postgres.bcrxqnfmoeygfezttpeo:@JayHacker26@@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres"
@@ -23,11 +29,12 @@ GOOGLE_API_KEY=[GOOGLE API KEY CỦA BẠN]
 OPENAI_API_KEY=[OPENAI API KEY CỦA BẠN]
 "
 
+
 Cách tạo app Github và lấy Github Client Id, Github Client Secret: [Github](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authenticating-to-the-rest-api-with-an-oauth-app)
 
 Cách lấy Google API Key và OpenAI API Key:
 
-## 3. Tải các package cần thiết: Tuỳ vào packet manager mà sử dụng lệnh phù hợp:
+## 4. Tải các package cần thiết: Tuỳ vào packet manager mà sử dụng lệnh phù hợp:
 ```bash
 npm install
 # or
@@ -38,7 +45,7 @@ pnpm install
 bun install
 ```
 
-## 4. Bật Live Server: Tùy vào packet manager mà sử dụng lệnh phù hợp:
+## 5. Bật Live Server: Tùy vào packet manager mà sử dụng lệnh phù hợp:
 ```bash
 npm run dev
 # or
