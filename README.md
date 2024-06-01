@@ -17,22 +17,24 @@ cd ./sonar_soflix
 - Nhập vào file .env vừa tạo:
 
 
-"
-DATABASE_URL="postgres://postgres.bcrxqnfmoeygfezttpeo:@JayHacker26@@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres"
+```bash
+DATABASE_URL=[URL ĐƯỢC LẤY TỪ TRONG SUPABASE THEO PROJECT CỦA BẠN]
 
-AUTH_SECRET=idig9qhu5F5TOYQRn/zPSlv8b+0E9QNcR9+wAR0WJGo=
+AUTH_SECRET=[AUTH_SECRET ĐƯỢC LẤY TỪ PROJECT CỦA BẠN]
 
 GITHUB_CLIENT_ID=[GITHUB CLIENT ID CỦA BẠN]
 GITHUB_CLIENT_SECRET=[GITHUB CLIENT SECRET CỦA BẠN]
 
 GOOGLE_API_KEY=[GOOGLE API KEY CỦA BẠN]
 OPENAI_API_KEY=[OPENAI API KEY CỦA BẠN]
-"
+```
 
 
 - Cách tạo app Github và lấy Github Client Id, Github Client Secret: [Github](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authenticating-to-the-rest-api-with-an-oauth-app)
 
-- Cách lấy Google API Key và OpenAI API Key:
+- Cách lấy Google API Key: [Get Google API Key](https://support.haravan.com/support/solutions/articles/42000087477-c%C3%A1ch-l%E1%BA%A5y-m%C3%A3-google-api-key)
+
+- Cách lấy OpenAI API Key: [Get OpenAI API Key](https://www.maisieai.com/help/how-to-get-an-openai-api-key-for-chatgpt)
 
 ## 4. Tải các package cần thiết: Tuỳ vào packet manager mà sử dụng lệnh phù hợp:
 ```bash
