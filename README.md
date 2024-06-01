@@ -27,8 +27,19 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 # Các công cụ hỗ trợ:
 
 ## 1. Auth.js
-  
+  Auth.js (trước đây là Next Auth) là một thư viện không phụ thuộc vào runtime, dựa trên các API Web tiêu chuẩn và tích hợp sâu với nhiều framework JavaScript hiện đại để cung cấp trải nghiệm xác thực đơn giản dễ bắt đầu, dễ mở rộng, đảm bảo riêng tư và an toàn!
+  ### Các phương pháp xác thực chính
+  - OAuth: Xác thực bằng tài khoản các Provider như Google, Github, ...
+  - Credentials: Xác thực bằng tài khoản và mật khẩu.
+    
+  ### Một số lợi ích mang lại:
+  - Hỗ trợ nhiều Provider lớn và phổ biến với OAuth.
+  - Hỗ trợ kết nối với nhiều loại Database khác nhau, dễ dàng tích hợp với Prisma và Supabase.
+  - Dễ dàng lập trình và chỉnh sửa.
+  - Đem lại mức độ bảo mật cao, đảm bảo riêng tư và an toàn tuyệt đối.
 
+  ### Tham khảo tài liệu:
+  Để biết thêm thông tin chi tiết, truy vập vào [AuthJS](https://authjs.dev/) - Trang web chính của AuthJS.
 
 ## 2. Prisma:
   Prisma là một ORM (Object-Relational Mapping) hiện đại dành cho Node.js và Typescript, là một hệ sinh thái hoàn chỉnh giúp bạn quản lý dữ liệu một cách hiệu quả và tin cậy. Nó giúp bạn làm việc với cơ sở dữ liệu một cách dễ dàng hơn thông qua việc cung cấp các công cụ và API trực quan.
