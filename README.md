@@ -58,16 +58,15 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Mở [http://localhost:3000](http://localhost:3000) với trình duyệt bạn muốn và xem kết quả.
 
 # Các công cụ hỗ trợ:
 
 ## 1. Auth.js
   Auth.js (trước đây là Next Auth) là một thư viện không phụ thuộc vào runtime, dựa trên các API Web tiêu chuẩn và tích hợp sâu với nhiều framework JavaScript hiện đại để cung cấp trải nghiệm xác thực đơn giản dễ bắt đầu, dễ mở rộng, đảm bảo riêng tư và an toàn!
+
+  ![auth](https://github.com/JayBao2604/sonar_soflix/assets/127290366/28384f0d-823e-4011-8df4-c46c3436099a)
+
   ### Các phương pháp xác thực chính
   - OAuth: Xác thực bằng tài khoản các Provider như Google, Github, ...
   - Credentials: Xác thực bằng tài khoản và mật khẩu.
@@ -83,6 +82,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## 2. Prisma:
   Prisma là một ORM (Object-Relational Mapping) hiện đại dành cho Node.js và Typescript, là một hệ sinh thái hoàn chỉnh giúp bạn quản lý dữ liệu một cách hiệu quả và tin cậy. Nó giúp bạn làm việc với cơ sở dữ liệu một cách dễ dàng hơn thông qua việc cung cấp các công cụ và API trực quan.
+  
+<img width="800" alt="prisma" src="https://github.com/JayBao2604/sonar_soflix/assets/127290366/e125882e-db54-4ac0-81a7-5923ee2e3733">
+
   ### Tính năng chính:
   - Data Modeling: Sử dụng schema.prisma để định nghĩa cấu trúc dữ liệu
   - Migrations: Tạo và quản lý các migrations để cập nhật cơ sở dữ liệu
@@ -101,6 +103,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## 3. Supabase:
   Supabase là một nền tảng mã nguồn mở được thiết kế để cung cấp các dịch vụ backend cho các ứng dụng web và di động hay còn gọi là nền tảng backend-as-a-service (Baas). Nó được biết đến như một giải pháp thay thế mã nguồn mở cho Firebase, cung cấp các tính năng tương tự nhưng với sự linh hoạt hơn và khả năng tùy chỉnh cao hơn. Supabase xây dựng dựa trên PostgreSQL, một trong những hệ quản trị cơ sở dữ liệu quan hệ mạnh mẽ và phổ biến nhất, và cung cấp nhiều tính năng để phát triển ứng dụng một cách nhanh chóng và hiệu quả.
+
+  <img width="992" alt="supabase" src="https://github.com/JayBao2604/sonar_soflix/assets/127290366/42f930fd-09ec-42c9-ae1e-fc84e6364ea9">
+
   ### Một số điểm nổi bật:
   - Cơ sở dữ liệu PostgreSQL: Sử dụng PostgreSQL làm cơ sở dữ liệu nền tảng, cung cấp đầy đủ các tính năng mạnh mẽ của PostgreSQL như JSONB, full-text search, và các extension như PostGIS.
   - API tự động: Tự động tạo ra RESTful API cho cơ sở dữ liệu của bạn dựa trên các bảng và schema bạn đã thiết lập, giúp bạn dễ dàng thao tác dữ liệu thông qua các endpoint API mà không cần viết mã backend.
@@ -119,6 +124,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
   
 ## 4. Shadcn/UI:
   Shadcn/UI là một thư viện giao diện người dùng (UI) xây dựng trên React, cung cấp các thành phần UI có thể tái sử dụng. 
+
+  ![shadcn](https://github.com/JayBao2604/sonar_soflix/assets/127290366/b457ef75-ab5f-4d86-9dbc-8a671696e261)
+
   ### Tính năng chính:
   - Component Library: Cung cấp nhiều thành phần UI như buttons, forms, modals, v.v.
   - Customizable: Dễ dàng tùy biến theo nhu cầu của dự án.
@@ -134,6 +142,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
   Để biết thêm nhiều thông tin chi tiết, các bạn có thể vào [Shadcn/UI](https://ui.shadcn.com/) - Trang web Shadcn/UI
 ## 5. Tailwind CSS:
   Taiwind CSS là một framework CSS mã nguồn mở tiện dụng giúp bạn xây dựng nhanh chóng các giao diện người dùng mà không cần viết nhiều CSS thủ công.
+
+  ![tailwind](https://github.com/JayBao2604/sonar_soflix/assets/127290366/89389acd-9983-4bdb-a086-e83fa2e118aa)
+
   ### Tính năng chính:
   - Utility-First Fundamentals: Sử dụng các lớp tiện ích để tạo kiểu trực tiếp trong HTML
   - Responsive Design: Sử dụng các biến thể tiện ích đáp ứng để xây dựng giao diện người dùng thích ứng.
@@ -171,21 +182,53 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 | Hoàng Vũ                    | 22521690   | Thành viên  |
 
 
-# Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
 # Deployment:
-on Vercel
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Web của nhóm mình được deploy trên Vercel - là một nền tảng tiên tiến dành cho việc triển khai và quản lý các ứng dụng Web, đặc biệt nổi bật với các dự án tĩnh và ứng dụng xây dựng bằng Next.js
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![vercel](https://github.com/JayBao2604/sonar_soflix/assets/127290366/b0cef0bf-3676-4205-bea3-bf30d71ca57b)
+
+## Các tính năng nổi bật:
+### 1. Dễ dàng tích hợp với Github, GitLab và Bitbucket: 
+Vercel cho phép tích hợp trực tiếp với các kho lưu trữ mã nguồn (repositories) trên GitHub, GitLab, và Bitbucket. Mỗi lần bạn push mã nguồn lên, Vercel sẽ tự động xây dựng và triển khai ứng dụng của bạn.
+
+### 2. Tối ưu hóa hiệu suất:
+- Vercel sử dụng CDN (Content Delivery Network) toàn cầu để phân phối nội dung, giúp tăng tốc độ tải trang cho người dùng ở khắp nơi trên thế giới.
+- Hỗ trợ caching và revalidation để giảm thời gian tải lại các trang.
+
+### 3. Hỗ trợ nhiều framework:
+Vercel hỗ trợ nhiều framework phổ biến như Next.js, React, Vue.js, Angular, Svelte, và hơn thế nữa. Đặc biệt, Vercel là nhà phát triển của Next.js nên hỗ trợ rất mạnh mẽ cho framework này.
+
+### 4. Triển khai serverless:
+Vercel hỗ trợ các chức năng serverless, cho phép bạn chạy mã phía server mà không cần phải quản lý server.
+
+### 5. Tích hợp với các dịch vụ bên thứ ba:
+Vercel cung cấp nhiều tích hợp với các dịch vụ bên thứ ba như Sentry, Datadog, và nhiều dịch vụ khác để theo dõi và quản lý ứng dụng.
+
+### 6. Custom Domain:
+Dễ dàng cấu hình tên miền tùy chỉnh cho ứng dụng của mình trên Vercel.\
+
+## Lợi ích mang lại:
+- Triển khai nhanh chóng và đơn giản: triển khai trên Vercel chỉ mất vài phút và không đòi hỏi kiến thức sâu về DevOps
+- Tối ưu hóa SEO và hiệu suất: tự động tối ưu hóa các trang web để tăng tốc độ tải trang và cải thiện SEO
+- Bảo mật và độ uy tín cao: Vercel đảm bảo rằng các ứng dụng được triển khai luôn sẵn sàng và bảo mật cao
+
+## Cách triển khai ứng dụng:
+### 1. Đăng ký và đăng nhập vào Vercel:
+Truy cập vào trang web [Vercel](https://vercel.com/) và đăng ký tài khoản hoặc đăng nhập nếu có tài khoản.
+### 2. Kết nối với repository của bạn:
+Bạn có thể kết nối Vercel với GitHub, GitLab, hoặc Bitbucket của bạn.
+
+### 3. Chọn repository để triển khai:
+Vercel sẽ hiển thị danh sách các repository của bạn. Chọn repository chứa mã nguồn của ứng dụng bạn muốn triển khai.
+
+### 4. Cấu hình dự án:
+Bạn có thể cần cấu hình một số thiết lập cơ bản như tên dự án, framework sử dụng, và các biến môi trường (nếu có).
+
+### 5. Triển khai ứng dụng:
+Sau khi cấu hình xong, bạn chỉ cần nhấn nút "Deploy". Vercel sẽ tự động xây dựng và triển khai ứng dụng của bạn.
+
+### 6. Theo dõi và quản lý triển khai:
+Sau khi triển khai, bạn có thể theo dõi trạng thái triển khai, kiểm tra log, và quản lý các phiên bản triển khai trong bảng điều khiển của Vercel.
 
 # Hình chụp các tiêu chí cộng điểm:
 ## 1. Video Seminar:
@@ -198,4 +241,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### Đối với di động:
 ![Screenshot 2024-06-01 175332](https://github.com/JayBao2604/sonar_soflix/assets/127290366/99e0ec23-4f41-4dd1-9476-0e671cc41a92)
 
+# Learn More
+
+Để tìm hiểu thêm về Next.js, hãy xem các tài nguyên sau:
+
+- [Next.js Documentation](https://nextjs.org/docs) - tìm hiểu về các tính năng và API của Next.js.
+- [Learn Next.js](https://nextjs.org/learn) - hướng dẫn Next.js mang tính tương tác.
+
+Bạn có thể kiếm tra [the Next.js GitHub repository](https://github.com/vercel/next.js/) - phản hồi và đóng góp của bạn đều được chào đón
 
