@@ -30,9 +30,9 @@ OPENAI_API_KEY=[OPENAI API KEY CỦA BẠN]
 "
 
 
-Cách tạo app Github và lấy Github Client Id, Github Client Secret: [Github](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authenticating-to-the-rest-api-with-an-oauth-app)
+- Cách tạo app Github và lấy Github Client Id, Github Client Secret: [Github](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authenticating-to-the-rest-api-with-an-oauth-app)
 
-Cách lấy Google API Key và OpenAI API Key:
+- Cách lấy Google API Key và OpenAI API Key:
 
 ## 4. Tải các package cần thiết: Tuỳ vào packet manager mà sử dụng lệnh phù hợp:
 ```bash
