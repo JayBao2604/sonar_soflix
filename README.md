@@ -234,7 +234,7 @@ Sau khi triển khai, bạn có thể theo dõi trạng thái triển khai, ki�
 ## 1. Video Seminar:
 ![Screenshot 2024-06-01 191421](https://github.com/JayBao2604/sonar_soflix/assets/127290366/275d839b-da0b-48ab-ad3e-bfee5894409a)
 
-## 2. Google Page Speed:
+## 2. Google Page Speed và SEO Test:
 ### Đối với máy tính:
 ![Screenshot 2024-06-01 174905](https://github.com/JayBao2604/sonar_soflix/assets/127290366/577fc252-72a2-4a38-9c6d-04e00522d7e1)
 
