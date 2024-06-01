@@ -130,15 +130,26 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
   ### Tham khảo tài liệu:
   Để biết thêm nhiều thông tin chi tiết, các bạn có thể vào [Tailwind CSS](https://tailwindcss.com/) - Trang web Tailwind CSS
+  
 # Tính năng của web:
--
--
--
--
+- Thưởng thức nhiều thể loại âm nhạc khác nhau như: Pop, OST, Playlist, Postcast,...
+- Trải nghiệm cảm giác nghe nhạc và xem video dựng nên từ bài hát đó
+- Có riêng cho mình danh sách yêu thích để có thể nghe lại
+- Sử dụng Bot Chat để cùng nhau trò chuyện
+- Dùng công cụ tìm kiếm để tìm thấy bài hát mình cần nghe và xem
+- Có thể like hoặc dislike các music video theo cảm nhận của mình
+- Cùng nhau bình luận các music video để đưa ra cảm xúc của mình
+- Trong phần profile, có thể đổi tên hoặc ảnh đại diện theo ý muốn
+- Có danh sách Top Rating dựa vào số lượt like trong các video âm nhạc và sẽ cập nhật hằng ngày
+- Có thể đăng ký tài khoản dựa vào tài khoản Github
+- Mỗi khi xem một video âm nhạc sẽ có những đề xuất bài hát liên quan đến video đó ở sau phần Comment
 
 # Danh sách thành viên nhóm:
-- Trần Gia Bảo - 22520119 (Trưởng nhóm)
-- Hoàng Vũ - 22521690 
+| Họ và tên                   | MSSV       | Chức vụ     |
+|-----------------------------|------------|-------------|
+| Trần Gia Bảo                | 22520119   | Trưởng nhóm |
+| Hoàng Vũ                    | 22521690   | Thành viên  |
+
 
 # Learn More
 
@@ -155,3 +166,16 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Hình chụp các tiêu chí cộng điểm:
+## 1. Video Seminar:
+![Screenshot 2024-06-01 191421](https://github.com/JayBao2604/sonar_soflix/assets/127290366/275d839b-da0b-48ab-ad3e-bfee5894409a)
+
+## 2. Google Page Speed:
+### Đối với máy tính:
+![Screenshot 2024-06-01 174905](https://github.com/JayBao2604/sonar_soflix/assets/127290366/577fc252-72a2-4a38-9c6d-04e00522d7e1)
+
+### Đối với di động:
+![Screenshot 2024-06-01 175332](https://github.com/JayBao2604/sonar_soflix/assets/127290366/99e0ec23-4f41-4dd1-9476-0e671cc41a92)
+
+
