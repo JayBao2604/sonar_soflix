@@ -1,9 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hướng dẫn setup môi trường:
 
-## Getting Started
+## 1. Lấy link của github này và sau đó chọn nơi mình muốn lưu trong máy tính và bật Command Prompt (CMD), dùng lệnh sau:
+```bash
+git clone https://github.com/JayBao2604/sonar_soflix.git
+```
+### Lưu ý: 
+Bạn phải tải Git về máy tính của bạn, nếu như chưa cài đặt Git thì bạn có thể thực hiện theo [How to Install Git](https://kinsta.com/knowledgebase/install-git/) - hướng dẫn cách cài đặt
 
-First, run the development server:
-
+## 2. Tùy vào packet manager mà sử dụng lệnh phù hợp:
 ```bash
 npm run dev
 # or
@@ -20,7 +24,29 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# Các công cụ hỗ trợ:
+
+## 1. Auth.js
+
+## 2. Prisma:
+
+## 3. Supabase:
+
+## 3. Shadcn/UI:
+
+## 4. Tailwind CSS:
+
+# Tính năng của web:
+-
+-
+-
+-
+
+# Danh sách thành viên nhóm:
+- Trần Gia Bảo - 22520119 (Trưởng nhóm)
+- Hoàng Vũ - 22521690 
+
+# Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -29,8 +55,9 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
+# Deployment:
+on Vercel
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
