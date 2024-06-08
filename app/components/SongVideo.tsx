@@ -5,7 +5,7 @@ import SongButtons from "./SongButtons";
 async function getData() {
   const data = await prisma.song.findFirst({
     where: {
-      id: 0,
+      id: 46,
     },
     select: {
       title: true,
